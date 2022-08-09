@@ -22,24 +22,22 @@ const CountersList = () => {
   const handleIncrement = (id) => {
     console.log("handleIncrement", id);
     setCounters(
-      counetrs.map((item) => {
-        if (item.id == id) {
-          return (item.value = item.value + 1);
-        } else {
-          return item;
+      counetrs.map((count) => {
+        if (count.id == id) {
+          count.value += 1;
         }
+        return count;
       })
     );
   };
   const handleDecrement = (id) => {
     console.log("handleDecrement", id);
     setCounters(
-      counetrs.map((item) => {
-        if (item.id === id) {
-          return (item.value = item.value - 1);
-        } else {
-          return item;
+      counetrs.map((count) => {
+        if (count.id === id) {
+          count.value -= 1;
         }
+        return count;
       })
     );
   };
